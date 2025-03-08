@@ -24,7 +24,8 @@ resource "aws_launch_template" "web" {
   user_data              = filebase64("install_apache.sh")
 
   tags = {
-    Name = "web"
+    Name     = "web"
+    git_file = "terraform/aws/ec2.tf"
   }
 }
 
